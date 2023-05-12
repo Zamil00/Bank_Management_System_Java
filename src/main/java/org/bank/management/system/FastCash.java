@@ -15,7 +15,7 @@ public class FastCash extends JFrame implements ActionListener {
 
     FastCash(String pin) {
         this.pin = pin;
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/atm.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel l3 = new JLabel(i3);
@@ -89,7 +89,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
             } String num = "17";
             if (ae.getSource() != b7 && balance < Integer.parseInt(amount)) {
-                JOptionPane.showMessageDialog(null, "Insuffient Balance");
+                JOptionPane.showMessageDialog(null, "Insufficient Balance");
                 return;
             }
 
