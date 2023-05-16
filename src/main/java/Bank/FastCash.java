@@ -1,4 +1,4 @@
-package org.bank.management.system;
+package Bank;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -89,7 +89,7 @@ public class FastCash extends JFrame implements ActionListener {
                 }
             } String num = "17";
             if (ae.getSource() != b7 && balance < Integer.parseInt(amount)) {
-                JOptionPane.showMessageDialog(null, "Insufficient Balance");
+                JOptionPane.showMessageDialog(null, "Insuffient Balance");
                 return;
             }
 
@@ -100,7 +100,7 @@ public class FastCash extends JFrame implements ActionListener {
                 Date date = new Date();
                 c.s.executeUpdate("insert into bank values('"+pin+"', '"+date+"', 'Withdrawl', '"+amount+"')");
                 JOptionPane.showMessageDialog(null, "Rs. "+amount+" Debited Successfully");
-
+                    
                 setVisible(false);
                 new Transactions(pin).setVisible(true);
             }
